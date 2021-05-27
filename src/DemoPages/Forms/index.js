@@ -1,8 +1,11 @@
 import React, {Fragment} from 'react';
 import {Route} from 'react-router-dom';
 
-import Homepage from"../Homepage";
-
+import FormUtama from "../Daily/Form";
+import Card from "../Daily/CardData";
+import CardData from "../Daily/CardIsi";
+import HomePage from "../Daily/Homepage";
+import Table from "../Daily/Table";
 
 import FormElementsLayouts from "./Elements/Layouts/";
 import FormElementsControls from "./Elements/Controls/";
@@ -29,6 +32,7 @@ import FormTextareaAutosize from './Components/TextareaAutosize/';
 import FormsNumberPickerExamples from './Components/NumberPicker/';
 import FormColorPicker from './Components/ColorPicker/';
 
+
 // Layout
 
 import AppHeader from '../../Layout/AppHeader/';
@@ -48,8 +52,13 @@ const Forms = ({match}) => (
             <div className="app-main__outer">
                 <div className="app-main__inner">
 
-                    <Route path={`${match.url}/homepage`} component={Homepage}/>
+                    {/*Nabilla*/}
 
+                    <Route path={`${match.url}/formutama`} component={FormUtama} exact/>
+                    <Route path={`${match.url}/card`} component={Card}/>
+                    <Route path={`${match.url}/carddata`} component={CardData}/>
+                    <Route path={`${match.url}/homepage`} component={HomePage}/>
+                    <Route path={`${match.url}/table`} component={Table}/>
 
                     {/* Form Elements */}
 

@@ -13,6 +13,7 @@ import UserBox from './Components/UserBox';
 import HeaderRightDrawer from "./Components/HeaderRightDrawer";
 
 import HeaderDots from "./Components/HeaderDots";
+import {IoIosAddCircle} from "react-icons/all";
 
 class Header extends React.Component {
     render() {
@@ -38,12 +39,10 @@ class Header extends React.Component {
                         "app-header__content",
                         {'header-mobile-open': enableMobileMenuSmall},
                     )}>
-
+                        {/*<div className="app-header-left">*/}
+                        {/*</div>*/}
                         <div className="app-header-right">
-
-                            <SearchBox/>
                             <HeaderDots/>
-                            <UserBox/>
                         </div>
                     </div>
                 </CSSTransitionGroup>
